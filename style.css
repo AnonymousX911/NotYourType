@@ -1,0 +1,134 @@
+@keyframes heartAnimation {
+    0% {
+        top: 60vh;
+        left: -0vw;
+    }
+    10% {
+        top: 40vh;
+        left: 10vw;
+    }
+    20% {
+        top: 20vh;
+        left: -10vw;
+    }
+    30% {
+        top: 0vh;
+        left: 10vw;
+    }
+    40% {
+        top: -20vh;
+        left: -10vw;
+    }
+    50% {
+        top: -40vh;
+        left: 10vw;
+    }
+    60% {
+        top: -60vh;
+        left: -10vw;
+    }
+    70% {
+        top: -80vh;
+        left: 10vw;
+    }
+    80% {
+        top: -100vh;
+        left: -10vw;
+    }
+    90% {
+        top: -120vh;
+        left: 10vw;
+    }
+    100% {
+        top: -140vh;
+        left: -10vw;
+    }
+
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container img {
+    margin-bottom: 50px;
+    height: 300px;
+}
+
+.noButton,
+.yesButton {
+    padding: 20px 40px;
+    margin: 0px 10px;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.noButton {
+    background: rgb(164, 164, 54);
+}
+
+.yesButton {
+    background: rgb(244, 106, 129);
+}
+
+#lovegif {
+    display: none;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#heartWrapper {
+    position: absolute;
+    height: 60px; 
+    width: 60px; 
+}
+
+#heart {
+    height: 60px;
+    width: 60px;
+    background: red;
+    transform: rotate(45deg);
+    margin-top: 20px;
+    animation: heartAnimation 3s linear;
+    position: absolute;
+}
+
+#heart::before,
+#heart::after {
+    position: absolute;
+    transform-origin: center;
+    content: '';
+    background: red;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+#heart::before {
+    top: -30px;
+    left: 0;
+}
+
+#heart::after {
+    top: 0px;
+    right: 30px;
+}
